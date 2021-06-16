@@ -1,6 +1,12 @@
-const stretchArea = document.querySelector(".repeat")
+const left_fab = document.querySelector(".left_fab")
+const right_fab = document.querySelector(".right_fab")
+let fabs = []
+fabs.push(left_fab, right_fab)
 
-
-stretchArea.addEventListener("mousedown", (e)=>{
-    console.log(e.target)
+fabs.forEach(fab => {
+    fab.addEventListener("click", (e) =>{
+        console.log(e.target)
+    }) 
 })
+
+
