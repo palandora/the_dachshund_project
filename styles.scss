@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
+
+$txt_size_heading: 35vw;
+$txt_size_caption: 14px;
+
+$col_very_light: #cccccc;
+$col_light: #8f8f8f;
+$col_black: #1d1d1d;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin setFAB {
+    position: absolute;
+    top: 220px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 0px 32px rgba($color: #000, $alpha: 1.0);
+  }
+
+body{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dachshund{
+    position: relative;
+    z-index: 1;
+    $height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .back{
+        background: right/contain no-repeat url('/assets/dh_back.png');
+        height: $height;
+        width: 200px;
+    }
+    .repeat{
+        position: relative;
+        background: center/contain url('/assets/repeat_part.png');
+        height: $height;
+        width: 200px;
+        .left_fab{
+            @include setFAB;
+            left: -12px;
+        }
+        .right_fab{
+            @include setFAB;
+            right: -12px;
+        }
+    }
+    .front{
+        background: left/contain no-repeat url('/assets/dh_front.png');
+        height: $height;
+        width: 400px;
+    }
+}
+
+.headline{
+    position: absolute;
+    font: {
+        size: $txt_size_heading;
+        weight: 900;
+    }
+    color: $col_very_light;
+}
+
+.caption{
+    position: absolute;
+    bottom: 24px;
+    font: {
+        size: $txt_size_caption;
+        weight: 500;
+    }
+    color: $col_light;
+    text-align: center;
+    span{
+        color: $col_black;
+    }
+}

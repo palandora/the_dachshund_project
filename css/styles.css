@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dachshund {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dachshund .back {
+  background: right/contain no-repeat url("/assets/dh_back.png");
+  height: 400px;
+  width: 200px;
+}
+
+.dachshund .repeat {
+  position: relative;
+  background: center/contain url("/assets/repeat_part.png");
+  height: 400px;
+  width: 200px;
+}
+
+.dachshund .repeat .left_fab {
+  position: absolute;
+  top: 220px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: white;
+  -webkit-box-shadow: 0 0px 32px black;
+          box-shadow: 0 0px 32px black;
+  left: -12px;
+}
+
+.dachshund .repeat .right_fab {
+  position: absolute;
+  top: 220px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background: white;
+  -webkit-box-shadow: 0 0px 32px black;
+          box-shadow: 0 0px 32px black;
+  right: -12px;
+}
+
+.dachshund .front {
+  background: left/contain no-repeat url("/assets/dh_front.png");
+  height: 400px;
+  width: 400px;
+}
+
+.headline {
+  position: absolute;
+  font-size: 35vw;
+  font-weight: 900;
+  color: #cccccc;
+}
+
+.caption {
+  position: absolute;
+  bottom: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8f8f8f;
+  text-align: center;
+}
+
+.caption span {
+  color: #1d1d1d;
+}
