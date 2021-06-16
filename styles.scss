@@ -7,21 +7,33 @@ $col_very_light: #cccccc;
 $col_light: #8f8f8f;
 $col_black: #1d1d1d;
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@mixin setFAB {
+@mixin setFAB{
     position: absolute;
-    top: 220px;
+    opacity: 0%;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
     width: 24px;
     height: 24px;
     border-radius: 12px;
     background: white;
     box-shadow: 0 0px 32px rgba($color: #000, $alpha: 1.0);
+  }
+
+  @mixin setHoverArea($positionFromLeft) {
+    position: absolute;
+    display: inline-block;
+    left: $positionFromLeft;
+    top: 168px;
+    width: 50%;
+    height: 133px;
   }
 
 body{
@@ -50,13 +62,25 @@ body{
         background: center/contain url('/assets/repeat_part.png');
         height: $height;
         width: 200px;
-        .left_fab{
-            @include setFAB;
-            left: -12px;
+        .hover_area_left{
+            @include setHoverArea(0);
+            .left_fab{
+                @include setFAB;
+                left: -12px;
+            }
+            &:hover .left_fab{
+                opacity: 100%;
+            }
         }
-        .right_fab{
-            @include setFAB;
-            right: -12px;
+        .hover_area_right{
+            @include setHoverArea(50%);
+            .right_fab{
+                @include setFAB;
+                right: -12px;
+            }
+            &:hover .right_fab{
+                opacity: 100%;
+            }
         }
     }
     .front{

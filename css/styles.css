@@ -48,9 +48,24 @@ body {
   width: 200px;
 }
 
-.dachshund .repeat .left_fab {
+.dachshund .repeat .hover_area_left {
   position: absolute;
-  top: 220px;
+  display: inline-block;
+  left: 0;
+  top: 168px;
+  width: 50%;
+  height: 133px;
+}
+
+.dachshund .repeat .hover_area_left .left_fab {
+  position: absolute;
+  opacity: 0%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 24px;
   height: 24px;
   border-radius: 12px;
@@ -60,9 +75,28 @@ body {
   left: -12px;
 }
 
-.dachshund .repeat .right_fab {
+.dachshund .repeat .hover_area_left:hover .left_fab {
+  opacity: 100%;
+}
+
+.dachshund .repeat .hover_area_right {
   position: absolute;
-  top: 220px;
+  display: inline-block;
+  left: 50%;
+  top: 168px;
+  width: 50%;
+  height: 133px;
+}
+
+.dachshund .repeat .hover_area_right .right_fab {
+  position: absolute;
+  opacity: 0%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 24px;
   height: 24px;
   border-radius: 12px;
@@ -70,6 +104,10 @@ body {
   -webkit-box-shadow: 0 0px 32px black;
           box-shadow: 0 0px 32px black;
   right: -12px;
+}
+
+.dachshund .repeat .hover_area_right:hover .right_fab {
+  opacity: 100%;
 }
 
 .dachshund .front {
